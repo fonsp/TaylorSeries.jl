@@ -298,4 +298,12 @@ end
     @test to(1 + ti) isa Taylor1{Float64}
     @test ti(1 + to) == 1 + to
     @test ti(1 + to) isa Taylor1{Taylor1{Float64}}
+    @test sqrt(tito^2) == tito
+    @test get_order(sqrt(tito^2)) == get_order(to) >> 1
+    @test (tito^3)^(1/3) == tito
+    @test get_order(sqrt(tito^2)) == get_order(to) >> 1
+    ti2to = ti^2 * to
+    tti = (ti2to/to)/ti
+    @test get_order(tti) == get_order(to)-1
+    @test get_order(tti[0]) == get_order(ti)-1
 end
