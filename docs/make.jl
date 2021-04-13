@@ -10,13 +10,13 @@ makedocs(
         "Background" => "background.md",
         "User guide" => "userguide.md",
         "Examples" => "examples.md",
-        "Pluto examples" => "pluto examples.md",
+        "Pluto examples" => "pluto_examples.md",
         "API" => "api.md"
     ]
 )
 
 deploydocs(
-    repo   = "github.com/JuliaDiff/TaylorSeries.jl.git",
+    repo   = "github.com/fonsp/TaylorSeries.jl.git",
     target = "build",
     deps   = nothing,
     make   = nothing,
