@@ -10,6 +10,7 @@ makedocs(
         "Background" => "background.md",
         "User guide" => "userguide.md",
         "Examples" => "examples.md",
+        "Pluto examples" => "pluto examples.md",
         "API" => "api.md"
     ]
 )
